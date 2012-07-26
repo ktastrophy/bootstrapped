@@ -12,9 +12,9 @@
 ?>
 <?php if ($this->helper('wishlist')->isAllow()) : ?>
 <div class="my-wishlist">
-    <div class="page-title title-buttons">
+    <div class="page-title title-buttons well">
         <?php if ($this->helper('wishlist')->isRssAllow() && $this->hasWishlistItems()): ?>
-            <a href="<?php echo $this->helper('wishlist')->getRssUrl(); ?>" class="link-rss"><?php echo $this->__('RSS Feed') ?></a>
+            <a href="<?php echo $this->helper('wishlist')->getRssUrl(); ?>" class="link-rss pull-right"><?php echo $this->__('RSS Feed') ?></a>
         <?php endif; ?>
         <h1><?php echo $this->__('My Wishlist') ?></h1>
     </div>
@@ -28,9 +28,9 @@
                     <tr>
                         <th><?php echo $this->__('Product') ?></th>
                         <th><?php echo $this->__('Comment') ?></th>
-                        <th class="a-center"><span class="nobr"><?php echo $this->__('Added On') ?></span></th>
-                        <th class="a-center"><span class="nobr"><?php echo $this->__('Add to Cart') ?></span></th>
-                        <th>&nbsp;</th>
+                        <th class="a-center span2"><span class="nobr"><?php echo $this->__('Added On') ?></span></th>
+                        <th class="a-center span2"><span class="nobr"><?php echo $this->__('Add to Cart') ?></span></th>
+                        <th class="a-center span2">&nbsp;</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -42,7 +42,7 @@
                     <tr>
                         <td>
                             <a class="product-image" href="<?php echo $this->getProductUrl($item) ?>" title="<?php echo $this->escapeHtml($product->getName()) ?>"><img src="<?php echo $this->helper('catalog/image')->init($product, 'small_image')->resize(113, 113); ?>" width="113" height="113" alt="<?php echo $this->escapeHtml($product->getName()) ?>" /></a>
-                            <h2 class="product-name"><a href="<?php echo $this->getProductUrl($item) ?>"><?php echo $this->escapeHtml($product->getName()) ?></a></h2>
+                            <h6 class="product-name"><a href="<?php echo $this->getProductUrl($item) ?>"><?php echo $this->escapeHtml($product->getName()) ?></a></h6>
                             <?php echo $this->getPriceHtml($product) ?>
                             <?php echo $this->getDetailsHtml($item) ?>
                         </td>
@@ -58,7 +58,7 @@
                         <?php endif; ?>
                         <?php if ($product->isSaleable()): ?>
                             <?php if ($isVisibleProduct): ?>
-                            <button type="button" title="<?php echo $this->__('Add to Cart') ?>" onclick="addWItemToCart(<?php echo $item->getId(); ?>)" class="btn pull-right"><span><span><?php echo $this->__('Add to Cart') ?></span></span></button>
+                            <button type="button" title="<?php echo $this->__('Add to Cart') ?>" onclick="addWItemToCart(<?php echo $item->getId(); ?>)" class="btn pull-right btn-mini btn-danger"><span><span><?php echo $this->__('Add to Cart') ?></span></span></button>
                             <?php endif ?>
                         <?php else: ?>
                             <p class="availability out-of-stock"><span><?php echo $this->__('Out of stock') ?></span></p>
@@ -78,13 +78,19 @@
                 </tbody>
             </table>
             <script type="text/javascript">decorateTable('wishlist-table')</script>
-            <div class="form-actions">
+            <div class="">
                 <div class="pull-right">
                     <button type="submit" onclick="this.name='save_and_share'" title="<?php echo $this->__('Share Wishlist') ?>" class="btn btn-share"><span><span><?php echo $this->__('Share Wishlist') ?></span></span></button>
                     <?php if($this->isSaleable()):?>
-                        <button type="button" title="<?php echo $this->__('Add All to Cart') ?>" onclick="addAllWItemsToCart()" class="btn btn-add"><span><span><?php echo $this->__('Add All to Cart') ?></span></span></button>
+                        <button type="button" title="<?php echo $this->__('Add All to Cart') ?>" onclick="addAllWItemsToCart()" class="btn btn-add btn-danger"><span><span><?php echo $this->__('Add All to Cart') ?></span></span></button>
                     <?php endif;?>
                     <button type="submit" title="<?php echo $this->__('Update Wishlist') ?>" onclick="this.name='do'" class="btn btn-update"><span><span><?php echo $this->__('Update Wishlist') ?></span></span></button>
+                </div>
+                <div class="buttons-set">
+                    <p class="back-link">
+                        <span class="icon-backward"></span>
+                        <a href="<?php echo $this->escapeUrl($this->getBackUrl()) ?>"><?php echo $this->__('Back') ?></a>
+                    </p>
                 </div>
             </div>
         </fieldset>
@@ -133,8 +139,5 @@
     }
     //]]>
     </script>
-</div>
-<div class="buttons-set">
-    <p class="back-link"><a href="<?php echo $this->escapeUrl($this->getBackUrl()) ?>"><small>&laquo; </small><?php echo $this->__('Back') ?></a></p>
 </div>
 <?php endif ?>
