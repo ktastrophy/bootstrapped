@@ -15,9 +15,10 @@
  * @var $test Mage_Customer_Block_Address_Book
  */
 ?>
-<div class="page-title title-buttons">
+<div class="page-title title-buttons well">
+    <button type="button" title="<?php echo $this->__('Add New Address') ?>" class="btn pull-right" onclick="window.location='<?php echo $this->getAddAddressUrl() ?>';"><span><span><?php echo $this->__('Add New Address') ?></span></span></button>
     <h1><?php echo $this->__('Address Book') ?></h1>
-    <button type="button" title="<?php echo $this->__('Add New Address') ?>" class="btn" onclick="window.location='<?php echo $this->getAddAddressUrl() ?>';"><span><span><?php echo $this->__('Add New Address') ?></span></span></button>
+
 </div>
 <?php echo $this->getMessagesBlock()->getGroupedHtml() ?>
 <div class="row">
@@ -65,7 +66,10 @@
     </div>
 </div>
 <div class="form-actions">
-    <p class="back-link"><a href="<?php echo $this->escapeUrl($this->getBackUrl()) ?>"><small>&laquo; </small><?php echo $this->__('Back') ?></a></p>
+    <p class="back-link">
+        <span class="icon-backward"></span>
+        <a href="<?php echo $this->escapeUrl($this->getBackUrl()) ?>"><?php echo $this->__('Back') ?></a>
+    </p>
 </div>
 <script type="text/javascript">
 //<![CDATA[
