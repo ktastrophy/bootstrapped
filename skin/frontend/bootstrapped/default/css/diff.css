@@ -169,3 +169,8 @@ a.product-image img{
     text-shadow: 0 0 0.2em #CFC, 0 0 0.2em #CFC, 0 0 0.2em #CFC;
     filter: progid:DXImageTransform.Microsoft.Glow(color=#ccffcc,strength=2);
 }
+.validation-advice {
+    vertical-align: middle;
+    padding-left: 5px;
+    display: inline-block;
+}
