@@ -173,4 +173,9 @@ a.product-image img{
     vertical-align: middle;
     padding-left: 5px;
     display: inline-block;
+    margin-bottom: 9px;
+}
+
+.control-group.error .validation-advice {
+    color: #B94A48;
 }
