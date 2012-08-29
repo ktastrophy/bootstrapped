@@ -83,6 +83,7 @@
                         <input type="password" class="input-text required-entry" id="login-password" name="login[password]" />
                     </div>
                 <?php echo $this->getChildHtml('persistent.remember.me'); ?>
+                <?php echo $this->getChildHtml('form.additional.info'); ?>
             <input name="context" type="hidden" value="checkout" />
             <p class="help-block"><?php echo $this->__('* Required Fields') ?></p>
         </fieldset>
