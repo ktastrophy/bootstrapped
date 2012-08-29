@@ -51,11 +51,13 @@
                             </div>
                             <?php echo $this->getChildHtml('persistent.remember.me'); ?>
                             <?php //echo $this->getChildHtml('persistent.remember.me.tooltip'); ?>
-                        <p class="help-block"><?php echo $this->__('* Required Fields') ?></p>
+                        <?php echo $this->getChildHtml('form.additional.info'); ?>
+
                             <?php if (Mage::helper('checkout')->isContextCheckout()): ?>
                                 <input name="context" type="hidden" value="checkout" />
                             <?php endif; ?>
                         <div class="form-actions">
+                            <p class="help-block"><?php echo $this->__('* Required Fields') ?></p>
                             <button type="submit" class="button btn btn-success pull-right" title="<?php echo $this->__('Login') ?>" name="send" id="send2"><span><span><?php echo $this->__('Login') ?></span></span></button>
                             <a href="<?php echo $this->getForgotPasswordUrl() ?>" class="f-left"><?php echo $this->__('Forgot Your Password?') ?></a>
                         </div>
