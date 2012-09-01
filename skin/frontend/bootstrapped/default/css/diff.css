@@ -179,3 +179,6 @@ a.product-image img{
 .control-group.error .validation-advice {
     color: #B94A48;
 }
+ul.tags-list li{
+    display: inline;
+}
