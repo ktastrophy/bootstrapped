@@ -30,21 +30,21 @@
 </div>
 <?php if( $this->getCollection() && $this->count()): ?>
     <?php echo $this->getToolbarHtml() ?>
-        <table class="data-table" id="my-reviews-table">
-            <col width="1" />
-            <col width="210" />
-            <col width="1" />
+        <table class="data-table table table-striped table-condensed" id="my-reviews-table">
+            <col class="span1"/>
+            <col class="span3"/>
+            <col class="span2"/>
             <col />
             <col width="1" />
             <tbody>
                 <?php foreach ($this->getCollection() as $_review): ?>
                 <tr>
                     <td><span class="nobr"><?php echo $this->dateFormat($_review->getReviewCreatedAt()); ?></span></td>
-                    <td><h2 class="product-name"><a href="<?php echo $this->getProductLink() ?>id/<?php echo $_review->getEntityPkValue() ?>"><?php echo $this->htmlEscape($_review->getName()) ?></a></h2></td>
+                    <td><h6 class="product-name"><a href="<?php echo $this->getProductLink() ?>id/<?php echo $_review->getEntityPkValue() ?>"><?php echo $this->htmlEscape($_review->getName()) ?></a></h6></td>
                     <td>
                     <?php if($_review->getSum()): ?>
-                        <div class="rating-box">
-                            <div class="rating" style="width:<?php echo ( $_review->getSum() / $_review->getCount() ) ?>%;"></div>
+                        <div class="progress">
+                            <div class="bar"  style="width:<?php echo ( $_review->getSum() / $_review->getCount() ) ?>%;"></div>
                         </div>
                     <?php endif; ?>
                     </td>
