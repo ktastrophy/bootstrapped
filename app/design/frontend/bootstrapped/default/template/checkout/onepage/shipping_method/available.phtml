@@ -25,7 +25,12 @@
                     <label class="radio alert alert-error"><?php echo $_rate->getErrorMessage() ?></label>
                    <?php else: ?>
                         <?php if ($_sole) : ?>
-                        <span class="no-display"><input name="shipping_method" type="radio" value="<?php echo $_rate->getCode() ?>" id="s_method_<?php echo $_rate->getCode() ?>" checked="checked" /></span>
+
+                        <label class="radio" for="s_method_<?php echo $_rate->getCode() ?>">
+                            <input name="shipping_method" type="radio" value="<?php echo $_rate->getCode() ?>" id="s_method_<?php echo $_rate->getCode() ?>"<?php if($_rate->getCode()===$this->getAddressShippingMethod()) echo ' checked="checked"' ?> class="radio"/>
+                            <?php /*?><span class="no-display"><input name="shipping_method" type="radio" value="<?php echo $_rate->getCode() ?>" id="s_method_<?php echo $_rate->getCode() ?>" checked="checked" /></span><?php */?>
+                            <?php echo $_rate->getMethodTitle() ?>
+                        </label>
                         <?php else: ?>
                             <label class="radio" for="s_method_<?php echo $_rate->getCode() ?>">
                                 <input name="shipping_method" type="radio" value="<?php echo $_rate->getCode() ?>" id="s_method_<?php echo $_rate->getCode() ?>"<?php if($_rate->getCode()===$this->getAddressShippingMethod()) echo ' checked="checked"' ?> class="radio"/>
