@@ -47,17 +47,24 @@
         <?php endif; ?>
         
         <div>
+            <blockquote>
+                <p><?php echo nl2br($this->htmlEscape($this->getReviewData()->getDetail())) ?></p>
+                <small><cite><?php echo $this->__('Product Review (submitted on %s):', $this->dateFormat($this->getReviewData()->getCreatedAt())) ?></cite></small>
+            </blockquote>
             <p>
-                <?php echo $this->__('Product Review (submitted on %s):', $this->dateFormat($this->getReviewData()->getCreatedAt())) ?>
+
             </p>
             <p>
-                <?php echo nl2br($this->htmlEscape($this->getReviewData()->getDetail())) ?>
+
             </p>
         </div>
         
     </div>
     <div class="buttons-set">
-        <p class="back-link"><a href="<?php echo $this->getBackUrl() ?>"><small class="icon-backward"></small><?php echo $this->__('Back to Product Reviews') ?></a></p>
+        <p class="back-link">
+            <small class="icon-backward"></small>
+            <a href="<?php echo $this->getBackUrl() ?>"><?php echo $this->__('Back to Product Reviews') ?></a>
+        </p>
     </div>
     
 		    </div>
