@@ -142,10 +142,13 @@ li .active > a{
     text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.2);
     background-color: #08C;
 }
-.category-products .caption h2{
+.category-products .caption h2, .category-products .products-list h2{
     text-transform: uppercase;
     font-size: 11px;
     line-height: 18px;
+}
+.products-list .thumbnail.data{
+    background-color: #F5F5F5;
 }
 .products-grid .item{
     margin-top: 2px;
