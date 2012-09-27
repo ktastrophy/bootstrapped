@@ -4,7 +4,6 @@ nbproject/*
 .project
 .buildpath
 downloader/*
-errors/*
 includes/*
 lib/*
 media/*
@@ -30,3 +29,10 @@ app/design/adminhtml/*
 app/design/install/*
 app/design/frontend/base/*
 app/design/frontend/default/*
+errors/default/*
+errors/.htaccess
+errors/404.php
+errors/503.php
+errors/local.xml.sample
+errors/processor.php
+errors/report.php
