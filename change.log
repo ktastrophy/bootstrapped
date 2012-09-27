@@ -1,3 +1,7 @@
+* --------- Version 0.9.3.3 -----------
+* + thumbnails markup implemented on category list
+* + thumbnails markup implemented on category grid
+
 * --------- Version 0.9.3.2 -----------
 * + added and configured "bootstrapped" custom skin in errors
 
