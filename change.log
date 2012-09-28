@@ -1,3 +1,11 @@
+* --------- Version 0.9.3.4 -----------
+* + added well class in logout success template
+* + catalog search advanced results/results block layout rearrangements
+* + catalog seo sitemap markup and styling changes
+* + all tags page layout changes and added well to title
+* + catalog search terms layout changes and added well to title
+
+
 * --------- Version 0.9.3.3 -----------
 * + thumbnails markup implemented on category list
 * + thumbnails markup implemented on category grid
