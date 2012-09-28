@@ -195,3 +195,6 @@ body.page-popup.catalog-product-compare-index{
 .page-popup.catalog-product-compare-index .well, .page-popup.catalog-product-compare-index .form-actions{
     margin-bottom: 0;
 }
+.page-sitemap ul.links.nav li{
+    float: right;
+}
