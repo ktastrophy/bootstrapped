@@ -1,3 +1,6 @@
+* --------- Version 0.9.4.1 -----------
+* + poll blocks with different colors and results with progress bars
+
 * --------- Version 0.9.3.4 -----------
 * + added well class in logout success template
 * + catalog search advanced results/results block layout rearrangements
