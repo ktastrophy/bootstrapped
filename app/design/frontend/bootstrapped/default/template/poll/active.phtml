@@ -24,7 +24,7 @@
     }
 //]]>
 </script>
-<div class="block block-poll well">
+<div class="block block-poll well alert-info">
     <div class="block-title">
         <strong><span><?php echo $this->__('Community Poll') ?></span></strong>
     </div>
@@ -45,10 +45,9 @@
 
 <!--            <script type="text/javascript">decorateList('poll-answers');</script>-->
             <?php endif; ?>
-            <div class="form-actions">
-                <button type="submit" title="<?php echo $this->__('Vote') ?>" class="btn btn-inverse pull-right"><span><span><?php echo $this->__('Vote') ?></span></span></button>
-            </div>
+            <button type="submit" title="<?php echo $this->__('Vote') ?>" class="btn btn-inverse pull-right"><span><span><?php echo $this->__('Vote') ?></span></span></button>
         </fieldset>
     </form>
 </div>
 <?php endif; ?>
+
