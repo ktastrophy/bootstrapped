@@ -1,3 +1,9 @@
+* --------- Version 0.9.5.1 -----------
+* + custom paginator styling changes
+* + toolbar modifications with buttons and icons
+* + added custom pager template
+* + removed bottom toolbar and added custom pager
+
 * --------- Version 0.9.4.1 -----------
 * + poll blocks with different colors and results with progress bars
 
