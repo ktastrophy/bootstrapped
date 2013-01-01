@@ -36,3 +36,4 @@ errors/503.php
 errors/local.xml.sample
 errors/processor.php
 errors/report.php
+/*.bat

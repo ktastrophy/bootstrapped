@@ -1,0 +1,11 @@
+body {
+	margin-top: 60px !important;
+}
+
+.cct-header-black {
+	display: block;
+	width: 100%;
+	background: #343434;
+	color: #FFFFFF;
+	font-size: 14px;
+}
