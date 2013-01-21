@@ -30,7 +30,7 @@
     $_items = Mage::getBlockSingleton('catalog/product_list')->getLoadedProductCollection();
 ?>
 
-<div class="page-title category-title well page-header">
+<div class="page-title category-title page-header">
     <?php if($this->IsRssCatalogEnable() && $this->IsTopCategory()): ?>
         <a href="<?php echo $this->getRssLink() ?>" class="pull-right"><?php echo $this->__('Subscribe to RSS Feed') ?></a>
     <?php endif; ?>
